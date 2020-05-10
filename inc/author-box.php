@@ -37,16 +37,12 @@
             // Check if social media info is collected in user profile
             // Usually handled by a plugin like WordPress SEO by Yoast
             $author_twitter = get_the_author_meta('twitter');
-            $author_googleplus = get_the_author_meta('googleplus');
             $author_facebook = get_the_author_meta('facebook');
-            if ( $author_twitter || $author_googleplus || $author_facebook ) {
+            if ( $author_twitter || $author_facebook ) {
                 echo '<div class="author-social-media">';
                 printf(__( 'Follow %s on social media: ', 'simone' ), get_the_author_meta('first_name') );
                 if ( $author_twitter ) {
                 	echo '<a href="https://twitter.com/' . esc_attr( $author_twitter ) . '" title="' . sprintf( __( 'Follow %s on Twitter', 'simone' ), $author_firstname ) . '"  target="_blank"><i class="fa fa-twitter"></i><span class="screen-reader-text">' . __( 'Twitter', 'simone' ) . '</span></a>';
-                }
-                if ( $author_googleplus ) {
-                	echo '<a href="' . esc_url( $author_googleplus ) . '" title="' . sprintf( __( 'Add %s to your Google+ circles', 'simone' ), $author_firstname ) . '"  rel="author" target="_blank"><i class="fa fa-google-plus"></i><span class="screen-reader-text">' . __( 'Google+', 'simone' ) . '</span></a>';
                 }
                 if ( $author_facebook ) {
                 	echo '<a href="' . esc_url( $author_facebook ) . '" title="' .  sprintf( __( 'Like %s on Facebook', 'simone' ), $author_firstname ) . '"  target="_blank"><i class="fa fa-facebook"></i><span class="screen-reader-text">' . __( 'Facebook', 'simone' ) . '</span></a>';
