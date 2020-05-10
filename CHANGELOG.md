@@ -12,3 +12,4 @@ Sunday May 10, 2020 Michael A. Peters
 * Removed references to Google Plus as it is dead
 * Rebrand from Simone to PipTheme
 * nuke gmpg.org and pingback <link/> tags from header.php
+* disable emojis (via https://kinsta.com/knowledgebase/disable-emojis-wordpress/#disable-emojis-code)
