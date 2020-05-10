@@ -74,7 +74,7 @@ if ( ! function_exists( 'simone_admin_header_style' ) ) :
 function simone_admin_header_style() {
 ?>
 	<style type="text/css">
-            @import url(http://fonts.googleapis.com/css?family=Lato:100,700);
+	        @import url('/fonts/Lato/css/Lato.css');
             
             .site-branding {
                 background: #651329;
