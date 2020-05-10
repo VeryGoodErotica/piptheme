@@ -10,3 +10,4 @@ Sunday May 10, 2020 Michael A. Peters
 * Serve the Lato font locally rather than via Google Fonts
 * Added Intel Clear Sans (served locally) to replace PT Serif
 * Removed references to Google Plus as it is dead
+* Rebrand from Simone to PipTheme
