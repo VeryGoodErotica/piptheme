@@ -44,8 +44,8 @@ function simone_setup() {
         }
 
         // This theme styles the visual editor to resemble the theme style.
-        $font_url = '//fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic';
-        add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+        $font_url = '//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic';
+        add_editor_style( array( 'inc/editor-style.css', 'fonts/Lato/css/Lato.css', str_replace( ',', '%2C', $font_url ) ) );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -148,8 +148,10 @@ function simone_scripts() {
         }
 
         // Lato http://www.google.com/fonts/specimen/Lato + PT Serif http://www.google.com/fonts/specimen/PT+Serif
-        wp_enqueue_style( 'simone-google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic' );
-
+        wp_enqueue_style( 'simone-google-fonts', '//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' );
+        // Lato
+        wp_enqueue_style('simone_lato', get_template_directory_uri() . '/fonts/Lato/css/Lato.css');
+        
         // FontAwesome
         wp_enqueue_style('simone_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.css');
 
