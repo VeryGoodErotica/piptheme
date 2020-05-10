@@ -1,24 +1,24 @@
 <?php
 /**
- * Simone functions and definitions
+ * PipTheme functions and definitions
  *
- * @package Simone
+ * @package PipTheme
  */
 
 /**
- * For child theme authors: To disable the styles and layouts from Simone properly,
+ * For child theme authors: To disable the styles and layouts from PipTheme properly,
  * add the following code to your child theme functions.php file:
  *
  * <?php
  * add_action( 'wp_enqueue_scripts', 'dequeue_parent_theme_styles', 11 );
  * function dequeue_parent_theme_styles() {
- *     wp_dequeue_style( 'simone-parent-style' );
- *     wp_dequeue_style( 'simone-layout' );
+ *     wp_dequeue_style( 'piptheme-parent-style' );
+ *     wp_dequeue_style( 'piptheme-layout' );
  * }
  *
  */
 
-if ( ! function_exists( 'simone_setup' ) ) :
+if ( ! function_exists( 'piptheme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -26,15 +26,15 @@ if ( ! function_exists( 'simone_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function simone_setup() {
+function piptheme_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on simone, use a find and replace
-	 * to change 'simone' to the name of your theme in all the template files
+	 * If you're building a theme based on piptheme, use a find and replace
+	 * to change 'piptheme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'simone', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'piptheme', get_template_directory() . '/languages' );
 
         /**
         * Set the content width based on the theme's design and stylesheet.
@@ -70,15 +70,15 @@ function simone_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'simone' ),
-        'social' => __( 'Social Menu', 'simone'),
+		'primary' => __( 'Primary Menu', 'piptheme' ),
+        'social' => __( 'Social Menu', 'piptheme'),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'simone_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'piptheme_custom_background_args', array(
 		'default-color' => 'b2b2b2',
 		'default-image' => get_template_directory_uri() . '/images/pattern.svg',
 	) ) );
@@ -92,15 +92,15 @@ function simone_setup() {
         'caption',
 	) );
 }
-endif; // simone_setup
-add_action( 'after_setup_theme', 'simone_setup' );
+endif; // piptheme_setup
+add_action( 'after_setup_theme', 'piptheme_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function simone_widgets_init() {
+function piptheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'simone' ),
+		'name'          => __( 'Sidebar', 'piptheme' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -109,8 +109,8 @@ function simone_widgets_init() {
 	) );
 
         register_sidebar( array(
-		'name'          => __( 'Footer Widget', 'simone' ),
-        'description'   => __( 'Footer widget area appears, not surprisingly, in the footer of the site.', 'simone' ),
+		'name'          => __( 'Footer Widget', 'piptheme' ),
+        'description'   => __( 'Footer widget area appears, not surprisingly, in the footer of the site.', 'piptheme' ),
 		'id'            => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -118,67 +118,67 @@ function simone_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'simone_widgets_init' );
+add_action( 'widgets_init', 'piptheme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function simone_scripts() {
+function piptheme_scripts() {
 
         // Get the current layout setting (sidebar left or right)
-        $simone_layout = get_option( 'layout_setting' );
+        $piptheme_layout = get_option( 'layout_setting' );
         if ( is_page_template( 'page-templates/page-nosidebar.php' ) || ! is_active_sidebar( 'sidebar-1' ) ) {
             $layout_stylesheet = '/layouts/no-sidebar.css';
-        } elseif ( 'left-sidebar' == $simone_layout ) {
+        } elseif ( 'left-sidebar' == $piptheme_layout ) {
             $layout_stylesheet =  '/layouts/sidebar-content.css';
         } else {
             $layout_stylesheet = '/layouts/content-sidebar.css';
         }
 
         // Load parent theme stylesheet even when child theme is active
-        wp_enqueue_style( 'simone-style', simon_get_parent_stylesheet_uri() );
+        wp_enqueue_style( 'piptheme-style', simon_get_parent_stylesheet_uri() );
 
         // Load layout stylesheet
-        wp_enqueue_style( 'simone-layout' , get_template_directory_uri() . $layout_stylesheet );
+        wp_enqueue_style( 'piptheme-layout' , get_template_directory_uri() . $layout_stylesheet );
 
         // Load child theme stylesheet
         if ( is_child_theme() ) {
-            wp_enqueue_style( 'simone-child-style', get_stylesheet_uri() );
+            wp_enqueue_style( 'piptheme-child-style', get_stylesheet_uri() );
         }
 
         // Lato
-        wp_enqueue_style('simone_lato', get_template_directory_uri() . '/fonts/Lato/css/Lato.css');
+        wp_enqueue_style('piptheme_lato', get_template_directory_uri() . '/fonts/Lato/css/Lato.css');
         
         // Clear Sans
-        wp_enqueue_style('simone_clearsans', get_template_directory_uri() . '/fonts/ClearSans/css/ClearSans.css');
+        wp_enqueue_style('piptheme_clearsans', get_template_directory_uri() . '/fonts/ClearSans/css/ClearSans.css');
         
         // FontAwesome
-        wp_enqueue_style('simone_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.css');
+        wp_enqueue_style('piptheme_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.css');
 
-		wp_enqueue_script( 'simone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+		wp_enqueue_script( 'piptheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-        wp_enqueue_script( 'simone-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
+        wp_enqueue_script( 'piptheme-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
 
-        wp_enqueue_script( 'simone-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
+        wp_enqueue_script( 'piptheme-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
 
-        wp_enqueue_script( 'simone-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
+        wp_enqueue_script( 'piptheme-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
 
-        wp_enqueue_script( 'simone-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
+        wp_enqueue_script( 'piptheme-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
 
-        wp_enqueue_script( 'simone-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );
+        wp_enqueue_script( 'piptheme-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );
 
 
         if (is_single() || is_author() ) {
-        	wp_enqueue_script( 'simone-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );
+        	wp_enqueue_script( 'piptheme-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );
         }
 
-	wp_enqueue_script( 'simone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'piptheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'simone_scripts' );
+add_action( 'wp_enqueue_scripts', 'piptheme_scripts' );
 
 /**
  * Return parent stylesheet URI
