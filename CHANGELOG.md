@@ -11,3 +11,4 @@ Sunday May 10, 2020 Michael A. Peters
 * Added Intel Clear Sans (served locally) to replace PT Serif
 * Removed references to Google Plus as it is dead
 * Rebrand from Simone to PipTheme
+* nuke gmpg.org and pingback <link/> tags from header.php
