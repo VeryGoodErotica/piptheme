@@ -145,7 +145,7 @@ select,
 textarea {
     font-size: 18px;
     font-size: 1.8rem;
-    font-family: 'PT Serif', serif;
+    font-family: 'Clear Sans', sans-serif;
     line-height: 1.5;
     color: #404040;
     color: hsl(0, 0%, 25%);
@@ -1542,7 +1542,7 @@ ol.children { list-style-type: none; }
 }
 
 .comment-form textarea {
-    font-family: 'PT Serif', serif;
+    font-family: 'Clear Sans', sans-serif;
     font-size: 18px;
     font-size: 1.8rem;
 }
