@@ -23,3 +23,4 @@ Monday May 11, 2020 Michael A. Peters
 
 * Changed header color for WCAG AAA contrast, changed site description font-weight to bold
 * tweaked CSS header for mobile
+* only use CSS3 colors (well, still have some hex codes)
