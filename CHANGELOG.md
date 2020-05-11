@@ -17,3 +17,9 @@ Sunday May 10, 2020 Michael A. Peters
 * update superfish.js to 1.7.10, do not use minified
 * update enquire.js to 2.1.6, do not use minified
 * remove more of the <link> crap wordpress adds by default
+
+Monday May 11, 2020 Michael A. Peters
+-------------------------------------
+
+* Changed header color for WCAG AAA contrast, changed site description font-weight to bold
+* tweaked CSS header for mobile

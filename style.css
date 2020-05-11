@@ -836,14 +836,14 @@ a:focus.page-numbers{
 .site-branding {
     padding: 6rem 0;
     text-align: center;
-    background: #0587BF;
-    background: hsl(198, 95%, 38%);
+    background: #02541B;
+    background: hsl(138.3, 97.6%, 32.9%);
 }
 
 .title-box {
     width: 600px;
     max-width: 75%;
-    padding: 4rem;
+    padding: 4rem 2rem;
     margin: 0 auto;
     border: solid 1px #fff;
     border: solid 1px hsla(0, 0%, 100%, .3);
@@ -859,7 +859,7 @@ a:focus.page-numbers{
 }
 
 .site-description {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     font-size: 2rem;
 }
@@ -896,8 +896,12 @@ a:focus.page-numbers{
     .title-box {
         max-width: 100%;
         margin: 0 auto;
-        padding: 4rem;
+        padding: 2rem;
         border: none;
+    }
+    
+    .site-title {
+        font-size: 4.2rem;
     }
 }
 
