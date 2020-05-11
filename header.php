@@ -19,7 +19,6 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
-            <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'piptheme' ); ?></a>
                 <?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) { ?>
                 <figure class="header-image">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -34,6 +33,7 @@
                     echo '<div class="site-branding">';
                 }
             ?>
+                    <a class="skip-link" href="#content"><?php _e( 'Skip to content', 'piptheme' ); ?></a>
                     <div class="title-box">
 			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
