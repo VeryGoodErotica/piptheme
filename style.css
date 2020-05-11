@@ -795,7 +795,7 @@ a:focus.page-numbers{
 .site-branding {
     padding: 6rem 0;
     text-align: center;
-    background: hsl(138.3, 97.6%, 32.9%);
+    background: hsl(138.3, 95%, 17%);
 }
 
 .title-box {
@@ -823,7 +823,7 @@ a:focus.page-numbers{
 
 .site-branding a { text-decoration: none; }
 
-.site-title a,
+.site-title,
 .site-description {
     color: hsl(0, 0%, 100%);
 }
