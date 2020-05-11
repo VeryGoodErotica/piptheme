@@ -26,3 +26,4 @@ Monday May 11, 2020 Michael A. Peters
 * only use CSS3 colors (well, still have some hex codes)
 * don't alter hyperlink colors, let browser do that
 * don't make site title in the header a home link
+* fix the Skip to content link so that it is visible rather than screen-reader only
