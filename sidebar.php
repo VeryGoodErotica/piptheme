@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package Simone
+ * @package PipTheme
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

@@ -1,37 +1,37 @@
 <?php
 /**
  * Custom header feature
- * @package simone
+ * @package PipTheme
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses simone_header_style()
- * @uses simone_admin_header_style()
- * @uses simone_admin_header_image()
+ * @uses piptheme_header_style()
+ * @uses piptheme_admin_header_style()
+ * @uses piptheme_admin_header_image()
  */
-function simone_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'simone_custom_header_args', array(
+function piptheme_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'piptheme_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1280,
 		'height'                 => 300,
 		'flex-height'            => false,
-		'wp-head-callback'       => 'simone_header_style',
-		'admin-head-callback'    => 'simone_admin_header_style',
-		'admin-preview-callback' => 'simone_admin_header_image',
+		'wp-head-callback'       => 'piptheme_header_style',
+		'admin-head-callback'    => 'piptheme_admin_header_style',
+		'admin-preview-callback' => 'piptheme_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'simone_custom_header_setup' );
+add_action( 'after_setup_theme', 'piptheme_custom_header_setup' );
 
-if ( ! function_exists( 'simone_header_style' ) ) :
+if ( ! function_exists( 'piptheme_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see simone_custom_header_setup().
+ * @see piptheme_custom_header_setup().
  */
-function simone_header_style() {
+function piptheme_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -63,18 +63,18 @@ function simone_header_style() {
 	</style>
 	<?php
 }
-endif; // simone_header_style
+endif; // piptheme_header_style
 
-if ( ! function_exists( 'simone_admin_header_style' ) ) :
+if ( ! function_exists( 'piptheme_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see simone_custom_header_setup().
+ * @see piptheme_custom_header_setup().
  */
-function simone_admin_header_style() {
+function piptheme_admin_header_style() {
 ?>
 	<style type="text/css">
-            @import url(http://fonts.googleapis.com/css?family=Lato:100,700);
+	        @import url('/fonts/Lato/css/Lato.css');
             
             .site-branding {
                 background: #651329;
@@ -158,15 +158,15 @@ function simone_admin_header_style() {
 	</style>
 <?php
 }
-endif; // simone_admin_header_style
+endif; // piptheme_admin_header_style
 
-if ( ! function_exists( 'simone_admin_header_image' ) ) :
+if ( ! function_exists( 'piptheme_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see simone_custom_header_setup().
+ * @see piptheme_custom_header_setup().
  */
-function simone_admin_header_image() {
+function piptheme_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
         
@@ -196,4 +196,4 @@ function simone_admin_header_image() {
 	
 <?php
 }
-endif; // simone_admin_header_image
+endif; // piptheme_admin_header_image

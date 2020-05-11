@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Simone
+ * @package PipTheme
  */
 ?>
 
@@ -13,13 +13,13 @@
 	<header class="entry-header">
 		<h1 class="entry-title">
                     <?php
-                    if ( is_404() ) { _e( 'Page not available', 'simone' );
+                    if ( is_404() ) { _e( 'Page not available', 'piptheme' );
 
                     } else if ( is_search() ) {
                     	/* translators: %s = search query */
-                    	printf( __( 'Nothing found for %s', 'simone'), '<em>' . get_search_query() . '</em>' );
+                    	printf( __( 'Nothing found for %s', 'piptheme'), '<em>' . get_search_query() . '</em>' );
                     } else {
-                    	_e( 'Nothing Found', 'simone' );
+                    	_e( 'Nothing Found', 'piptheme' );
                     }
                     ?>
                 </h1>
@@ -28,21 +28,21 @@
 	<div class="entry-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'simone' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'piptheme' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
                 <?php elseif ( is_404() ) : ?>
 
-                        <p><?php _e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'simone' ); ?></p>
+                        <p><?php _e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'piptheme' ); ?></p>
                         <?php get_search_form(); ?>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Nothing matched your search terms. Check out the most recent articles below or try searching for something else:', 'simone' ); ?></p>
+			<p><?php _e( 'Nothing matched your search terms. Check out the most recent articles below or try searching for something else:', 'piptheme' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'simone' ); ?></p>
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'piptheme' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
@@ -53,7 +53,7 @@
     if ( is_404() || is_search() ) {
 
     ?>
-        <header class="page-header"><h1 class="page-title"><?php _e( 'Most recent posts:', 'simone' ); ?></h1></header>
+        <header class="page-header"><h1 class="page-title"><?php _e( 'Most recent posts:', 'piptheme' ); ?></h1></header>
     <?php
         // Get the 6 latest posts
         $args = array(

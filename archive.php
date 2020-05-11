@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Simone
+ * @package PipTheme
  */
 
 get_header(); ?>
@@ -19,30 +19,30 @@ get_header(); ?>
 					<?php
 						if ( is_category() ) :
                              /* translators: %s = single category title */
-                             printf( __( 'Posts in the %s category:', 'simone' ), '<em>' . single_cat_title( '', false ) . '</em>' );
+                             printf( __( 'Posts in the %s category:', 'piptheme' ), '<em>' . single_cat_title( '', false ) . '</em>' );
 
 						elseif ( is_tag() ) :
                              /* translators: %s = single tag title */
-                             printf( __( 'Posts with the %s tag', 'simone' ), '<em>' . single_tag_title( '', false ) . '</em>' );
+                             printf( __( 'Posts with the %s tag', 'piptheme' ), '<em>' . single_tag_title( '', false ) . '</em>' );
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'simone' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'piptheme' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						/* Prepending string for day, month and year needs context in order to be individually translatable. */
 						elseif ( is_day() ) :
-							printf( _x( 'Posts from %s', 'archive for a day', 'simone' ), '<span>' . get_the_date( _x( 'F j, Y', 'Daily archives date format', 'simone')) . '</span>' );
+							printf( _x( 'Posts from %s', 'archive for a day', 'piptheme' ), '<span>' . get_the_date( _x( 'F j, Y', 'Daily archives date format', 'piptheme')) . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( _x( 'Posts from %s', 'archive for a month', 'simone' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'simone' ) ) . '</span>' );
+							printf( _x( 'Posts from %s', 'archive for a month', 'piptheme' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'piptheme' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( _x( 'Posts from %s', 'archive for a year', 'simone' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'simone' ) ) . '</span>' );
+							printf( _x( 'Posts from %s', 'archive for a year', 'piptheme' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'piptheme' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'simone' );
+							_e( 'Asides', 'piptheme' );
 
 						else :
-							_e( 'Archives', 'simone' );
+							_e( 'Archives', 'piptheme' );
 
 						endif;
 					?>
@@ -77,7 +77,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php simone_paging_nav(); ?>
+			<?php piptheme_paging_nav(); ?>
 
 		<?php else : ?>
 

@@ -2,7 +2,7 @@
 /**
  * The Masonry-powered footer sidebar
  *
- * @package Simone
+ * @package PipTheme
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' ) ) {

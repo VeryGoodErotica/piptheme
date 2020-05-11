@@ -19,27 +19,27 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-# @ simone
+# @ piptheme
 #. translators: %s = single category title
 #: archive.php:22
 #, php-format
 msgid "Posts in the %s category:"
 msgstr "Beiträge der Kategorie %s:"
 
-# @ simone
+# @ piptheme
 #. translators: %s = single tag title
 #: archive.php:26
 #, php-format
 msgid "Posts with the %s tag"
 msgstr "Beiträge mit dem Schlagwort %s"
 
-# @ simone
+# @ piptheme
 #: archive.php:29
 #, php-format
 msgid "Author: %s"
 msgstr "Autor: %s"
 
-# @ simone
+# @ piptheme
 #: archive.php:33
 #, php-format
 msgctxt "archive for a day"
@@ -51,43 +51,43 @@ msgctxt "Daily archives date format"
 msgid "F j, Y"
 msgstr "j. F Y"
 
-# @ simone
+# @ piptheme
 #: archive.php:36
 #, php-format
 msgctxt "archive for a month"
 msgid "Posts from %s"
 msgstr "Beiträge vom %s"
 
-# @ simone
+# @ piptheme
 #: archive.php:36
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-# @ simone
+# @ piptheme
 #: archive.php:39
 #, php-format
 msgctxt "archive for a year"
 msgid "Posts from %s"
 msgstr "Beiträge im Jahr %s"
 
-# @ simone
+# @ piptheme
 #: archive.php:39
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-# @ simone
+# @ piptheme
 #: archive.php:42
 msgid "Asides"
 msgstr "Notizen"
 
-# @ simone
+# @ piptheme
 #: archive.php:45
 msgid "Archives"
 msgstr "Archive"
 
-# @ simone
+# @ piptheme
 #: comments.php:29
 #, php-format
 msgctxt "comments title"
@@ -96,50 +96,50 @@ msgid_plural "%1$s comments:"
 msgstr[0] "Ein Kommentar:"
 msgstr[1] "%1$s Kommentare:"
 
-# @ simone
+# @ piptheme
 #: comments.php:47
 msgid "Comment navigation"
 msgstr "Kommentarnavigation"
 
-# @ simone
+# @ piptheme
 #: comments.php:48
 msgid "Older Comments"
 msgstr "Ältere Kommentare"
 
-# @ simone
+# @ piptheme
 #: comments.php:49
 msgid "Newer Comments"
 msgstr "Neuere Kommentare"
 
-# @ simone
+# @ piptheme
 #: comments.php:59
 msgid "Comments are closed."
 msgstr "Kommentare geschlossen."
 
-# @ simone
+# @ piptheme
 #: content-aside.php:17 content-page.php:32 content-single.php:42
 #: content.php:61
 msgid "Edit"
 msgstr "Bearbeiten"
 
-# @ simone
+# @ piptheme
 #: content-none.php:16
 msgid "Page not available"
 msgstr "Seite nicht verfügbar"
 
-# @ simone
+# @ piptheme
 #. translators: %s = search query
 #: content-none.php:20
 #, php-format
 msgid "Nothing found for %s"
 msgstr "Nichts gefunden zu %s"
 
-# @ simone
+# @ piptheme
 #: content-none.php:22
 msgid "Nothing Found"
 msgstr "Nichts gefunden"
 
-# @ simone
+# @ piptheme
 #: content-none.php:31
 #, php-format
 msgid ""
@@ -147,7 +147,7 @@ msgid ""
 msgstr ""
 "<a href=\"%1$s\">Hier</a> kannst du deinen ersten Beitrag veröffentlichen."
 
-# @ simone
+# @ piptheme
 #: content-none.php:35
 msgid ""
 "You seem to be lost. To find what you are looking for check out the most "
@@ -156,7 +156,7 @@ msgstr ""
 "Du scheinst dich verirrt zu haben. Um zu finden, wonach du suchst, sieh dir "
 "die jüngsten Beiträgen weiter unten an, oder probier’s mal mit einer Suche:"
 
-# @ simone
+# @ piptheme
 #: content-none.php:40
 msgid ""
 "Nothing matched your search terms. Check out the most recent articles below "
@@ -166,7 +166,7 @@ msgstr ""
 "Beiträgen weiter unten an, oder versuche es mit anders formulierten "
 "Suchbegriffen:"
 
-# @ simone
+# @ piptheme
 #: content-none.php:45
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
@@ -174,98 +174,98 @@ msgid ""
 msgstr ""
 "Offenbar ist das Gewünschte nicht zu finden. Vielleicht hilft eine Suche?"
 
-# @ simone
+# @ piptheme
 #: content-none.php:56
 msgid "Most recent posts:"
 msgstr "Aktuelle Beiträge:"
 
-# @ simone
+# @ piptheme
 #: content-page.php:27 content-single.php:50 image.php:48
 msgid "Pages:"
 msgstr "Seiten:"
 
-# @ simone
+# @ piptheme
 #. translators: used between list items, there is a space after the comma
 #: content-single.php:25 content.php:43
 msgid ", "
 msgstr ", "
 
-# @ simone
+# @ piptheme
 #: content-single.php:38 content.php:57
 msgid "Leave a comment"
 msgstr "Kommentieren"
 
-# @ simone
+# @ piptheme
 #: content-single.php:38 content.php:57
 msgid "1 Comment"
 msgstr "1 Kommentar"
 
-# @ simone
+# @ piptheme
 #: content-single.php:38 content.php:57
 msgid "% Comments"
 msgstr "% Kommentare"
 
-# @ simone
+# @ piptheme
 #: content.php:13 content.php:26
 msgid "Read "
 msgstr "Lies "
 
-# @ simone
+# @ piptheme
 #: content.php:72
 msgctxt "First part of \"Read *article title* in title tag of Read more link"
 msgid "Read "
 msgstr "Lies "
 
-# @ simone
+# @ piptheme
 #: content.php:72
 msgid "Read <span aria-hidden=\"true\">the article</span>"
 msgstr "<span aria-hidden=\"true\">Den Beitrag </span>Lesen"
 
-# @ simone
+# @ piptheme
 #: content.php:79
 msgid "Continue Reading "
 msgstr "Weiterlesen"
 
-# @ simone
+# @ piptheme
 #: content.php:79
 msgid "Continue Reading"
 msgstr "Weiterlesen"
 
-# @ simone
+# @ piptheme
 #. translators: %s = text link: WordPress, URL: http://wordpress.org/
 #: footer.php:20
 #, php-format
 msgid "Proudly powered by %s"
 msgstr "Mit %s betrieben."
 
-# @ simone
+# @ piptheme
 #. translators: %1$s = text link: Simone, URL: http://wordpress.org/themes/simone/, %2$s = text link: mor10.com, URL: http://mor10.com/
 #: footer.php:27
 #, php-format
 msgid "Theme: %1$s by %2$s"
 msgstr "Theme: %1$s von %2$s"
 
-# @ simone
+# @ piptheme
 #: functions.php:55
 msgid "Primary Menu"
 msgstr "Primäres Menü"
 
-# @ simone
+# @ piptheme
 #: functions.php:56
 msgid "Social Menu"
 msgstr "Social Menü"
 
-# @ simone
+# @ piptheme
 #: functions.php:85
 msgid "Sidebar"
 msgstr "Sidebar"
 
-# @ simone
+# @ piptheme
 #: functions.php:94
 msgid "Footer Widgets"
 msgstr "Footer Widgets"
 
-# @ simone
+# @ piptheme
 #: functions.php:95
 msgid ""
 "Footer widgets area appears, not surprisingly, in the footer of the site."
@@ -273,174 +273,174 @@ msgstr ""
 "Der „Footer“ Widget-Bereich erscheint, wenig überraschend, im Footer der "
 "Site."
 
-# @ simone
+# @ piptheme
 #: header.php:25
 msgid "Skip to content"
 msgstr "Weiter zum Inhalt"
 
-# @ simone
+# @ piptheme
 #: header.php:47
 msgid "Menu"
 msgstr "Menü"
 
-# @ simone
+# @ piptheme
 #: header.php:53
 msgid "Search"
 msgstr "Suche"
 
-# @ simone
+# @ piptheme
 #: image.php:25
 msgid "Featured in: "
 msgstr "Empfohlen in: "
 
-# @ simone
+# @ piptheme
 #: image.php:26
 msgid "Full size image: "
 msgstr "Bild in voller Größe: "
 
-# @ simone
+# @ piptheme
 #: image.php:27
 msgid "Edit attachment post"
 msgstr "Anhang bearbeiten"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:10
 msgid "Hide Author Bio"
 msgstr "Autorenbiografie verbergen"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:21
 #, php-format
 msgid "About %s"
 msgstr "Über %s"
 
-# @ simone
+# @ piptheme
 #. translators: May be followed by another sentence. There is a space after the punctuation mark.
 #: inc/author-box.php:29
 msgid "One article and counting. "
 msgstr "Ein Beitrag, Tendenz steigend. "
 
-# @ simone
+# @ piptheme
 #. translators: May be followed by another sentence. There is a space after the punctuation mark.
 #: inc/author-box.php:34
 #, php-format
 msgid "%s articles and counting. "
 msgstr "%s Beiträge, Tendenz steigend. "
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:44
 #, php-format
 msgid "Follow %s on social media: "
 msgstr "Folge %s in Sozialen Medien: "
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:46
 #, php-format
 msgid "Follow %s on Twitter"
 msgstr "Folge %s bei Twitter"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:46
 msgid "Twitter"
 msgstr "Twitter"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:49
 #, php-format
 msgid "Add %s to your Google+ circles"
 msgstr "Füge %s zu deinen Kreisen bei Google+ hinzu"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:49
 msgid "Google+"
 msgstr "Google+"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:52
 #, php-format
 msgid "Like %s on Facebook"
 msgstr "Teile bei Facebook, dass  %s dir gefällt"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:52
 msgid "Facebook"
 msgstr "Facebook"
 
-# @ simone
+# @ piptheme
 #: inc/author-box.php:65
 #, php-format
 msgid "All posts by %s"
 msgstr "Alle Beiträge von %s"
 
-# @ simone
+# @ piptheme
 #: inc/customizer.php:46
 msgid "Header Color"
 msgstr "Header-Farbe"
 
-# @ simone
+# @ piptheme
 #: inc/customizer.php:65
 msgid "Link Color"
 msgstr "Link-Farbe"
 
-# @ simone
+# @ piptheme
 #: inc/extras.php:63
 #, php-format
 msgid "Page %s"
 msgstr "Seite %s"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:45
 msgid "&larr; Previous"
 msgstr "&larr; Vorherige"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:46
 msgid "Next &rarr;"
 msgstr "Nächste &rarr;"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:54
 msgid "Posts navigation"
 msgstr "Beitragsnavigation"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:79 inc/template-tags.php:101
 msgid "Post navigation"
 msgstr "Beitragsnavigation"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:82
 msgid "Previous Post:"
 msgstr "Vorheriger Beitrag:"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:83
 msgid "Next Post:"
 msgstr "Nächster Beitrag:"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:104
 msgid "Previous Image"
 msgstr "Vorheriges Bild"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:105
 msgid "Next Image"
 msgstr "Nächstes Bild"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:126
 msgctxt "Public posted on date"
 msgid "F jS, Y"
 msgstr "j. F Y"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:128
 msgctxt "Public modified on date"
 msgid "F jS, Y"
 msgstr "j. F Y"
 
-# @ simone
+# @ piptheme
 #: inc/template-tags.php:131
 #, php-format
 msgctxt ""
@@ -455,7 +455,7 @@ msgstr ""
 "\"> am </span><span class=\"posted-on\">%2$s</span><span class=\"mobile-hide"
 "\">.</span>"
 
-# @ simone
+# @ piptheme
 #: search.php:16
 #, php-format
 msgid "Search Results for: %s"

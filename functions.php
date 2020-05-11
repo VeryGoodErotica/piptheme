@@ -1,24 +1,24 @@
 <?php
 /**
- * Simone functions and definitions
+ * PipTheme functions and definitions
  *
- * @package Simone
+ * @package PipTheme
  */
 
 /**
- * For child theme authors: To disable the styles and layouts from Simone properly,
+ * For child theme authors: To disable the styles and layouts from PipTheme properly,
  * add the following code to your child theme functions.php file:
  *
  * <?php
  * add_action( 'wp_enqueue_scripts', 'dequeue_parent_theme_styles', 11 );
  * function dequeue_parent_theme_styles() {
- *     wp_dequeue_style( 'simone-parent-style' );
- *     wp_dequeue_style( 'simone-layout' );
+ *     wp_dequeue_style( 'piptheme-parent-style' );
+ *     wp_dequeue_style( 'piptheme-layout' );
  * }
  *
  */
 
-if ( ! function_exists( 'simone_setup' ) ) :
+if ( ! function_exists( 'piptheme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -26,15 +26,15 @@ if ( ! function_exists( 'simone_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function simone_setup() {
+function piptheme_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on simone, use a find and replace
-	 * to change 'simone' to the name of your theme in all the template files
+	 * If you're building a theme based on piptheme, use a find and replace
+	 * to change 'piptheme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'simone', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'piptheme', get_template_directory() . '/languages' );
 
         /**
         * Set the content width based on the theme's design and stylesheet.
@@ -44,8 +44,7 @@ function simone_setup() {
         }
 
         // This theme styles the visual editor to resemble the theme style.
-        $font_url = '//fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic';
-        add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+        add_editor_style( array( 'inc/editor-style.css', 'fonts/Lato/css/Lato.css', 'fonts/ClearSans/css/ClearSans.css' ) );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -71,15 +70,15 @@ function simone_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'simone' ),
-        'social' => __( 'Social Menu', 'simone'),
+		'primary' => __( 'Primary Menu', 'piptheme' ),
+        'social' => __( 'Social Menu', 'piptheme'),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'simone_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'piptheme_custom_background_args', array(
 		'default-color' => 'b2b2b2',
 		'default-image' => get_template_directory_uri() . '/images/pattern.svg',
 	) ) );
@@ -93,15 +92,15 @@ function simone_setup() {
         'caption',
 	) );
 }
-endif; // simone_setup
-add_action( 'after_setup_theme', 'simone_setup' );
+endif; // piptheme_setup
+add_action( 'after_setup_theme', 'piptheme_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function simone_widgets_init() {
+function piptheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'simone' ),
+		'name'          => __( 'Sidebar', 'piptheme' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -110,8 +109,8 @@ function simone_widgets_init() {
 	) );
 
         register_sidebar( array(
-		'name'          => __( 'Footer Widget', 'simone' ),
-        'description'   => __( 'Footer widget area appears, not surprisingly, in the footer of the site.', 'simone' ),
+		'name'          => __( 'Footer Widget', 'piptheme' ),
+        'description'   => __( 'Footer widget area appears, not surprisingly, in the footer of the site.', 'piptheme' ),
 		'id'            => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -119,64 +118,67 @@ function simone_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'simone_widgets_init' );
+add_action( 'widgets_init', 'piptheme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function simone_scripts() {
+function piptheme_scripts() {
 
         // Get the current layout setting (sidebar left or right)
-        $simone_layout = get_option( 'layout_setting' );
+        $piptheme_layout = get_option( 'layout_setting' );
         if ( is_page_template( 'page-templates/page-nosidebar.php' ) || ! is_active_sidebar( 'sidebar-1' ) ) {
             $layout_stylesheet = '/layouts/no-sidebar.css';
-        } elseif ( 'left-sidebar' == $simone_layout ) {
+        } elseif ( 'left-sidebar' == $piptheme_layout ) {
             $layout_stylesheet =  '/layouts/sidebar-content.css';
         } else {
             $layout_stylesheet = '/layouts/content-sidebar.css';
         }
 
         // Load parent theme stylesheet even when child theme is active
-        wp_enqueue_style( 'simone-style', simon_get_parent_stylesheet_uri() );
+        wp_enqueue_style( 'piptheme-style', simon_get_parent_stylesheet_uri() );
 
         // Load layout stylesheet
-        wp_enqueue_style( 'simone-layout' , get_template_directory_uri() . $layout_stylesheet );
+        wp_enqueue_style( 'piptheme-layout' , get_template_directory_uri() . $layout_stylesheet );
 
         // Load child theme stylesheet
         if ( is_child_theme() ) {
-            wp_enqueue_style( 'simone-child-style', get_stylesheet_uri() );
+            wp_enqueue_style( 'piptheme-child-style', get_stylesheet_uri() );
         }
 
-        // Lato http://www.google.com/fonts/specimen/Lato + PT Serif http://www.google.com/fonts/specimen/PT+Serif
-        wp_enqueue_style( 'simone-google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic' );
-
+        // Lato
+        wp_enqueue_style('piptheme_lato', get_template_directory_uri() . '/fonts/Lato/css/Lato.css');
+        
+        // Clear Sans
+        wp_enqueue_style('piptheme_clearsans', get_template_directory_uri() . '/fonts/ClearSans/css/ClearSans.css');
+        
         // FontAwesome
-        wp_enqueue_style('simone_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css');
+        wp_enqueue_style('piptheme_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.css');
 
-		wp_enqueue_script( 'simone-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+		wp_enqueue_script( 'piptheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-        wp_enqueue_script( 'simone-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
+        wp_enqueue_script( 'piptheme-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20120206', true );
 
-        wp_enqueue_script( 'simone-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20140328', true );
+        wp_enqueue_script( 'piptheme-superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '20180226', true );
 
-        wp_enqueue_script( 'simone-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
+        wp_enqueue_script( 'piptheme-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('jquery'), '20140328', true );
 
-        wp_enqueue_script( 'simone-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
+        wp_enqueue_script( 'piptheme-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
 
-        wp_enqueue_script( 'simone-enquire', get_template_directory_uri() . '/js/enquire.min.js', false, '20140429', true );
+        wp_enqueue_script( 'piptheme-enquire', get_template_directory_uri() . '/js/enquire.js', false, '20170304', true );
 
 
         if (is_single() || is_author() ) {
-        	wp_enqueue_script( 'simone-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );
+        	wp_enqueue_script( 'piptheme-hide', get_template_directory_uri() . '/js/hide.js', array('jquery'), '20140310', true );
         }
 
-	wp_enqueue_script( 'simone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'piptheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'simone_scripts' );
+add_action( 'wp_enqueue_scripts', 'piptheme_scripts' );
 
 /**
  * Return parent stylesheet URI
@@ -188,6 +190,62 @@ function simon_get_parent_stylesheet_uri() {
 		return get_stylesheet_uri();
 	}
 }
+
+/* from https://kinsta.com/knowledgebase/disable-emojis-wordpress/#disable-emojis-code */
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_action( 'admin_print_styles', 'print_emoji_styles' ); 
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' ); 
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+  add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
+}
+add_action( 'init', 'disable_emojis' );
+/**
+ * Filter function used to remove the tinymce emoji plugin.
+ * 
+ * @param array $plugins 
+ * @return array Difference betwen the two arrays
+ */
+function disable_emojis_tinymce( $plugins ) {
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
+}
+/**
+ * Remove emoji CDN hostname from DNS prefetching hints.
+ *
+ * @param array $urls URLs to print for resource hints.
+ * @param string $relation_type The relation type the URLs are printed for.
+ * @return array Difference betwen the two arrays.
+ */
+function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
+  if ( 'dns-prefetch' == $relation_type ) {
+    /** This filter is documented in wp-includes/formatting.php */
+    $emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
+    $urls = array_diff( $urls, array( $emoji_svg_url ) );
+  }
+return $urls;
+}
+
+/* from https://wordpress.org/support/topic/what-is-wp-json-and-api-w-org-seems-like-theyre-slowing-my-site-load/ */
+// Disable REST API link tag
+remove_action('wp_head', 'rest_output_link_wp_head', 10);
+// Disable oEmbed Discovery Links
+remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
+// Disable REST API link in HTTP headers
+remove_action('template_redirect', 'rest_output_link_header', 11, 0);
+
+/* don't add resource hints */
+remove_action('wp_head', 'wp_resource_hints', 2);
 
 /**
  * Implement the Custom Header feature.
