@@ -16,3 +16,4 @@ Sunday May 10, 2020 Michael A. Peters
 * fix css for abbr tag
 * update superfish.js to 1.7.10, do not use minified
 * update enquire.js to 2.1.6, do not use minified
+* remove more of the <link> crap wordpress adds by default
