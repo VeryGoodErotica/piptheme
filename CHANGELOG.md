@@ -13,3 +13,6 @@ Sunday May 10, 2020 Michael A. Peters
 * Rebrand from Simone to PipTheme
 * nuke gmpg.org and pingback <link/> tags from header.php
 * disable emojis (via https://kinsta.com/knowledgebase/disable-emojis-wordpress/#disable-emojis-code)
+* fix css for abbr tag
+* update superfish.js to 1.7.10, do not use minified
+* update enquire.js to 2.1.6, do not use minified
