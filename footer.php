@@ -27,6 +27,7 @@
 				__( 'Theme: %1$s by %2$s', 'piptheme' ),
                                 esc_attr( 'PipTheme', 'piptheme' ),
 				'<a href="https://pipfrosch.com/" rel="designer nofollow">' . esc_attr__( 'Pipfrosch Press', 'piptheme' ) . '</a>' ); ?>
+		    <br/><a href="/privacy-policy/">Privacy Policy</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
