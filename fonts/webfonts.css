@@ -1,4 +1,7 @@
-/* ClearSans Font - Apache License 2.0 */
+/*!
+ *  Clear Sans
+ *  License - Apache 2
+ */
 @font-face {
   font-family: 'Clear Sans';
   font-weight: 100;
@@ -55,7 +58,10 @@
   src: local('Clear Sans BoldItalic'), local('ClearSans BoldItalic'), local('ClearSans-BoldItalic'), url('ClearSans/fonts/ClearSans-BoldItalic.woff2') format('woff2');
   font-display: swap;
 }
-/* Lato Font - OFL */
+/*!
+ *  Clear Sans
+ *  License - OFL
+ */
 @font-face {
   font-family: 'Lato';
   font-weight: 100;
@@ -131,11 +137,9 @@
  *  Font Awesome 4.7.0 by @davegandy - https://fontawesome.com/ - @fontawesome
  *  License - https://fontawesome.com/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-/* FONT PATH
- * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('font-awesome/fonts/fontawesome-webfont.woff2') format('woff2');
+  src: url('font-awesome/fonts/fontawesome-webfont.woff2') format('woff2'), url('font-awesome/fonts/fontawesome-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
