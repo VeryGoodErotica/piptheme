@@ -32,3 +32,8 @@ Tuesday May 12, 2020 Michael A. Peters
 --------------------------------------
 
 * Unify webfont CSS into single file
+
+Wednesday May 13, 2020 Michael A. Peters
+----------------------------------------
+
+* Add .htaccess file to fonts/ directory to serve webfonts with proper mime type and set cache header font fonts and css
